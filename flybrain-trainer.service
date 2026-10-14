@@ -1,0 +1,13 @@
+[Unit]
+Description=Fly brain car racing trainer (24/7)
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/fly-brain-racing
+EnvironmentFile=%h/.config/flybrain.env
+ExecStart=/run/current-system/sw/bin/nix-shell --run "python train.py --push-every 1800"
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=default.target

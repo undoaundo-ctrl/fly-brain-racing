@@ -1,0 +1,7 @@
+numpy
+scipy
+pandas
+matplotlib
+gymnasium[box2d]
+pygame
+composio
